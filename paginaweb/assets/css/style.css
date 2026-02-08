@@ -1,0 +1,294 @@
+:root {
+    --primary: #ff2a2a;
+    --dark-bg: #0a0a0a;
+    --glass: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--dark-bg);
+    font-family: 'Outfit', sans-serif;
+    color: #e0e0e0;
+
+    overflow-x: hidden;
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+.navbar-brand {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.navbar-glass {
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--glass-border);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.7) !important;
+    transition: 0.3s;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary) !important;
+    text-shadow: 0 0 10px rgba(255, 42, 42, 0.5);
+}
+
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), var(--dark-bg)), url('../img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    margin-top: -76px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 900;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+.card-car {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.card-car:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 30px rgba(255, 42, 42, 0.2);
+    border-color: var(--primary);
+}
+
+.card-img-wrapper {
+    overflow: hidden;
+    height: 220px;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.card-car:hover .card-img-top {
+    transform: scale(1.1);
+}
+
+.price-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--primary);
+    color: black;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-family: 'Orbitron', sans-serif;
+    box-shadow: 0 0 15px var(--primary);
+}
+
+.btn-neon {
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    padding: 10px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.btn-neon:hover {
+    background: var(--primary);
+    color: black;
+    box-shadow: 0 0 20px var(--primary);
+}
+
+.search-input {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    color: white;
+    border-radius: 50px;
+    padding: 15px 30px;
+}
+
+.search-input:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary);
+    color: white;
+    box-shadow: none;
+}
+
+.glass-panel {
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+}
+
+.form-control-dark {
+    background: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 10px;
+}
+
+.form-control-dark:focus {
+    background: rgba(0, 0, 0, 0.8) !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 15px rgba(255, 42, 42, 0.3) !important;
+}
+
+.table-dark-custom {
+    background: transparent;
+    color: #ccc;
+}
+
+.table-dark-custom th {
+    background: rgba(255, 42, 42, 0.1);
+    color: var(--primary);
+    border-color: rgba(255, 255, 255, 0.1);
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+}
+
+.table-dark-custom td {
+    border-color: rgba(255, 255, 255, 0.05);
+    vertical-align: middle;
+}
+
+.navbar-brand,
+.logo-text {
+    color: #ffffff !important;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.navbar-brand span,
+.logo-text span {
+    color: var(--primary) !important;
+    text-shadow: 0 0 10px rgba(255, 42, 42, 0.6);
+}
+
+.input-group.glass-search {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 50px;
+    padding: 5px 15px;
+    transition: 0.3s;
+}
+
+.input-group.glass-search:focus-within {
+    background: rgba(0, 0, 0, 0.6);
+    border-color: var(--primary);
+    box-shadow: 0 0 15px rgba(255, 42, 42, 0.3);
+}
+
+.search-input {
+    background: transparent !important;
+    border: none !important;
+    color: white !important;
+    box-shadow: none !important;
+    padding-left: 10px;
+}
+
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.input-group-text {
+    padding-right: 0;
+}
+
+
+/* --- SOLUCIÓN FINAL V3 PARA MÓVIL --- */
+
+/* 1. Seguro anti-desbordamiento */
+html,
+body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    position: relative;
+}
+
+/* 2. Reglas específicas para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+
+    /* EL TÍTULO: Aquí está la clave */
+    .hero-title {
+        font-size: 3rem !important;
+        /* Tamaño base seguro */
+        line-height: 1.1;
+        width: 100%;
+        text-align: center;
+        padding: 0 10px;
+        /* Margen de seguridad lateral */
+    }
+
+    /* Forzar que la palabra "ADRENALINE" baje de línea y se ajuste */
+    .hero-title span {
+        display: block;
+        /* Pone ADRENALINE en su propia línea */
+        font-size: 11vw !important;
+        /* Se ajusta al 11% del ancho de la pantalla */
+        margin-top: 5px;
+    }
+
+    /* Forzar que "PURE" sea un poco más pequeño */
+    .hero-title {
+        font-size: 8vw !important;
+    }
+
+    /* Ajustar la altura del fondo para que quepa todo */
+    .hero-section {
+        padding-top: 150px !important;
+        padding-bottom: 50px;
+        height: auto !important;
+        min-height: 100vh;
+    }
+
+    /* Subtítulo */
+    .hero-section .lead {
+        font-size: 1rem !important;
+        margin-bottom: 2rem;
+    }
+
+    /* BUSCADOR: Ancho completo */
+    .input-group.glass-search {
+        width: 100% !important;
+        margin-top: 20px;
+    }
+
+    /* LOGO MENÚ: Tamaño seguro */
+    .navbar-brand {
+        font-size: 1.1rem !important;
+        max-width: 75%;
+        white-space: nowrap;
+        /* Que no se parta el logo */
+    }
+}
